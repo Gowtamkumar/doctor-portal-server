@@ -37,7 +37,7 @@ client.connect(err => {
         const email = req.body.email
 
         doctorsCollection.find({ email: email })
-        
+
             .toArray((err, doctors) => {
                 const filter = { date: date.data }
                 if (doctors.length === 0) {
@@ -124,7 +124,7 @@ client.connect(err => {
             })
     })
     app.get('/', (req, res) => {
-        res.send('Doctor portal!')
+        res.send('Doctor portal')
     })
 
     console.log("database connection")
